@@ -57,6 +57,19 @@ class MainActivity : AppCompatActivity() {
             2 -> Log.d("kotlintest","ミルクを注文しました")
             else -> Log.d("kotlintest","オーダーミスです")
         }
-        
+
+        //for文
+        for (i in 1 until 6) {
+            Log.d("kotlintest","for文の" + i + "回目")
+        }
+
+        //while文
+        num =1
+        while (num < 6) {
+            Log.d("kotlintest","while文の" + num + "回目")
+            num++
+        }
+
+
     }
 }
