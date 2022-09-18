@@ -77,6 +77,21 @@ class MainActivity : AppCompatActivity() {
             Log.d("kotlintest", i.toString())
         }
 
+        //例外処理
+        val numA = 100
+        val numB = 0
+        var ans = 0
+
+        try {
+            ans = numA / numB
+        } catch (e : Exception) {
+            Log.d("kotlintest","0で割ろうとしました")
+            // 例外情報から、メッセージを表示
+            Log.d("kotlintest",e.message.toString())
+        } finally {
+            Log.d("kotlintest", "ans = " + ans.toString())
+        }
+
 
     }
 }
