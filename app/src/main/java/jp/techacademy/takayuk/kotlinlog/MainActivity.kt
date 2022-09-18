@@ -46,7 +46,17 @@ class MainActivity : AppCompatActivity() {
             Log.d("kotlintest","不可")
         }
 
+        //when文
+        val drink = 1
 
-
+        when (drink) {
+            0 -> {
+                Log.d("kotlintest","コーヒーを注文しました")
+            }
+            1 -> Log.d("kotlintest","紅茶を注文しました")
+            2 -> Log.d("kotlintest","ミルクを注文しました")
+            else -> Log.d("kotlintest","オーダーミスです")
+        }
+        
     }
 }
