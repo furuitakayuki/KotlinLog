@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         Log.d("kotlintest","犬の名前は" + dog.name + "です。")
         Log.d("kotlintest","犬の年齢は" + dog.age + "歳です。")
 
-        val dog2 = Dog("ハチ",10)     // 名前をハチ、年齢10歳で、Dogインスタンスを作る
+        val bigdog = BigDog("ハチ",10)     // 名前をヨーゼフ、年齢15歳で、BigDogのインスタンスを作る
 
-        dog2.say()
-        Log.d("kotlintest","犬の名前は" + dog2.name + "です。")
-        Log.d("kotlintest","犬の年齢は" + dog2.age + "歳です。")
+        bigdog.say()
+        Log.d("kotlintest","犬の名前は" + bigdog.name + "です。")
+        Log.d("kotlintest","犬の年齢は" + bigdog.age + "歳です。")
     }
 }
