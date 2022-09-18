@@ -9,89 +9,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d("kotlintest","ログへの出力テスト")
+        val dog = Dog("ポチ",3)       // 名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
-        // 整数型の変数をnumという名前で作成して、１０を代入する
-        var num = 10
-        Log.d("kotlintest",Integer.toString(num))
+        dog.say()   // ポチが吠えます（ログ出力）
+        Log.d("kotlintest","犬の名前は" + dog.name + "です。")
+        Log.d("kotlintest","犬の年齢は" + dog.age + "歳です。")
 
-        // numに５０を代入する
-        // 変数や定数に .tostring() と記述する方法もある
-        num = 50
-        Log.d("kotlintest",num.toString())
+        val dog2 = Dog("ハチ",10)     // 名前をハチ、年齢10歳で、Dogインスタンスを作る
 
-        //演算子
-        val num1 = 10+5-2*4/2
-        Log.d("kotlintest","10 + 5 - 2 * 4 / 2 = " + num1)
-
-        val flag1 = true
-        val flag2 = false
-        Log.d("kotlintest","flag1 && flag2 = " + (flag1 && flag2))
-        Log.d("kotlintest","flag1 || flag2 = " + (flag1 || flag2))
-
-        val num2 = 10
-        val num3 = 20
-        Log.d("kotlintest","num2 < num3 = " + (num2 < num3))
-
-        //if文
-        num = 60
-
-        if (num >=90) {
-            Log.d("kotlintest","優")
-        } else if (num >= 75){
-            Log.d("kotlintest","良")
-        } else if (num >= 60){
-            Log.d("kotlintest","可")
-        } else {
-            Log.d("kotlintest","不可")
-        }
-
-        //when文
-        val drink = 1
-
-        when (drink) {
-            0 -> {
-                Log.d("kotlintest","コーヒーを注文しました")
-            }
-            1 -> Log.d("kotlintest","紅茶を注文しました")
-            2 -> Log.d("kotlintest","ミルクを注文しました")
-            else -> Log.d("kotlintest","オーダーミスです")
-        }
-
-        //for文
-        for (i in 1 until 6) {
-            Log.d("kotlintest","for文の" + i + "回目")
-        }
-
-        //while文
-        num =1
-        while (num < 6) {
-            Log.d("kotlintest","while文の" + num + "回目")
-            num++
-        }
-
-        // Array<Int>型の配列が作成される
-        val points = arrayOf(10,6,15,23,17)
-
-        for (i in points) {
-            Log.d("kotlintest", i.toString())
-        }
-
-        //例外処理
-        val numA = 100
-        val numB = 0
-        var ans = 0
-
-        try {
-            ans = numA / numB
-        } catch (e : Exception) {
-            Log.d("kotlintest","0で割ろうとしました")
-            // 例外情報から、メッセージを表示
-            Log.d("kotlintest",e.message.toString())
-        } finally {
-            Log.d("kotlintest", "ans = " + ans.toString())
-        }
-
-
+        dog2.say()
+        Log.d("kotlintest","犬の名前は" + dog2.name + "です。")
+        Log.d("kotlintest","犬の年齢は" + dog2.age + "歳です。")
     }
 }
