@@ -2,10 +2,12 @@ package jp.techacademy.takayuk.kotlinlog
 
 import android.util.Log
 
-class BigDog// superで親クラスのコンストラクタを呼ぶ
-    (name: String, age: Int) : Dog(name, age) {
+class BigDog: Dog {
+    // superで親クラスのコンストラクタを呼ぶ
+    constructor(name: String, age: Int): super(name, age) {
+    }
 
-    override fun say() {
+    override  fun say() {
         super.say()
         Log.d("kotlintest","大きな犬です。")
     }
