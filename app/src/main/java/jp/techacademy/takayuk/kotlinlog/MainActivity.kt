@@ -20,13 +20,16 @@ class MainActivity : AppCompatActivity() {
         val bigdog = BigDog("ヨーゼフ",15)      // 名前をヨーゼフ、年齢15歳で、BigDogのインスタンスを作る
 
         bigdog.say()
+        bigdog.move()
         Log.d("kotlintest","犬の名前は" + bigdog.name + "です。")
         Log.d("kotlintest","犬の年齢は" + bigdog.name + "歳です。")
 
-        val human = Human("古井貴之",26,"")    // 名前を古井貴之、年齢3歳で、Humanのインスタンスを作る
+        val human = Human("古井貴之",26,"アニメ")    // 名前を古井貴之、年齢２６歳、考えていることをアニメで、Humanのインスタンスを作る
         human.say()
+        human.think()
 
-        val thinkable = Human("",0,"kotlin")    // 考えていることをkotlinで、Humanのインスタンスを作る
+        val thinkable = Human("古井　貴之",0,"kotlin")    // 名前を古井　貴之、年齢０歳考えていることをkotlinで、Humanのインスタンスを作る
+        thinkable.say()
         thinkable.think()
     }
 }

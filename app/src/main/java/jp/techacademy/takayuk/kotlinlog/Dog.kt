@@ -9,12 +9,12 @@ open class Dog: Animal, Movable{
 
     // Animalクラスのメソッドをオーバーライド
     override fun say() {
-        Log.d("kotlinyest",this.name + "(" + this.age + "歳)" + "「ワンワン」")
+        Log.d("kotlintest",this.name + "(" + this.age + "歳)" + "「ワンワン」")
     }
 
     // Movableインターフェイスのメソッドをオーバーライド
     override  fun move(){
-        Log.d("kotlinyest",this.name + "(" + this.age + "歳)" + "は全力で走った。")
+        Log.d("kotlintest",this.name + "(" + this.age + "歳)" + "は全力で走った。")
     }
 
 
